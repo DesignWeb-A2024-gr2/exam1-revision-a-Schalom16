@@ -29,6 +29,9 @@ header {
 header h1 {
     margin-bottom: 0px;
 }
+#texteajoute{
+    display: none;
+}
 
 article {
     grid-area: article;
@@ -58,4 +61,33 @@ article {
 }
 .image img{
     width: 200px;
+}
+
+@media print {
+    #main_container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 120px 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: 
+            "header header header"
+            "article article article"
+            "image image image";
+    
+        padding: 10px;
+        margin: 0px 100px;
+    }
+    #texteajoute{
+        display: block;
+    }
+    .pub{
+        display: none;
+    }
+    .image{
+        grid-area: image;
+    }
+    .article{
+        grid-area: article;
+    }
+
 }
