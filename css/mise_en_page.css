@@ -1,0 +1,51 @@
+
+html{
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 15% 25% 60%;
+    grid-template-areas: 
+    "gauche texte"
+    "lien texte"
+    "image texte";
+}
+
+#menu{
+    grid-area: gauche;
+    background-color: aliceblue;
+}
+#lien{
+    grid-area: lien;
+    background-color: aliceblue;
+}
+#logo{
+    grid-area: image;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: aliceblue;
+}
+#logo img{
+    width:100px
+}
+article{
+    grid-area: texte;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:50px;
+    background-color: blueviolet;
+}
+article h1{
+    font-size: 3em;
+    margin: 2px;
+}
+ p{
+    text-align: justify;
+}
